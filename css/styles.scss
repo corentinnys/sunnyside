@@ -2,6 +2,7 @@
 
 body{
   max-width: 1444px;
+  margin: auto;
 }
 .center{
   text-align: center;
@@ -99,4 +100,30 @@ footer{
     width: $w-100;
   }
 
+}
+
+.hobbies{
+  display: flex;
+  align-items: center;
+  border:1px solid red;
+
+  & div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 500px;
+  }
+  & p{
+    width: 50%;
+  }
+  & .hobbies--item:first-child{
+    background: url("../assets/pictures/photography.jpg") no-repeat;
+    background-size: cover;
+  }
+  & .hobbies--item:last-child{
+    background: url("../assets/pictures/graphic-design.jpg") no-repeat;
+    background-size: cover;
+  }
 }

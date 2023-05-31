@@ -1,5 +1,6 @@
 body {
-  max-width: 1444px; }
+  max-width: 1444px;
+  margin: auto; }
 
 .center {
   text-align: center; }
@@ -71,5 +72,25 @@ footer section {
     margin: 0; }
   .galery .galery--image {
     width: 100%; }
+
+.hobbies {
+  display: flex;
+  align-items: center;
+  border: 1px solid red; }
+  .hobbies div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 500px; }
+  .hobbies p {
+    width: 50%; }
+  .hobbies .hobbies--item:first-child {
+    background: url("../assets/pictures/photography.jpg") no-repeat;
+    background-size: cover; }
+  .hobbies .hobbies--item:last-child {
+    background: url("../assets/pictures/graphic-design.jpg") no-repeat;
+    background-size: cover; }
 
 /*# sourceMappingURL=styles.css.map */
