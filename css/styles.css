@@ -1,7 +1,8 @@
 body {
   max-width: 1444px;
   margin: auto;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  background: #F2F2F2; }
 
 .center {
   text-align: center; }
@@ -11,6 +12,9 @@ body {
 
 .row-reverse {
   flex-direction: row-reverse; }
+
+.font-family-openSans {
+  font-family: "Open Sans", sans-serif; }
 
 .column {
   flex-direction: column;
@@ -80,28 +84,35 @@ footer section {
         -webkit-filter: brightness(0) invert(1);
         filter: brightness(0) invert(1); }
 
-.testimonials section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
-  .testimonials section div {
+.testimonials {
+  margin: 50px; }
+  .testimonials section {
     display: flex;
-    flex-direction: column;
-    align-items: center; }
-    .testimonials section div img {
-      width: 72px;
-      height: 72px;
-      border-radius: 50%; }
-    .testimonials section div h3 {
-      color: #A7AAAD;
-      margin-top: 0;
-      margin-right: 0;
-      margin-bottom: 120px;
-      margin-left: 0; }
+    flex-direction: row;
+    justify-content: center; }
+    .testimonials section div {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .testimonials section div img {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%; }
+      .testimonials section div p {
+        width: 75%; }
+      .testimonials section div h3 {
+        color: #A7AAAD;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 120px;
+        margin-left: 0; }
 
 .testimonial--heading {
   text-align: center;
-  color: #A7AAAD; }
+  color: #A7AAAD;
+  margin-top: 150px;
+  margin-bottom: 50px;
+  text-transform: uppercase; }
 
 .galery {
   display: flex;
@@ -124,7 +135,8 @@ footer section {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    height: 500px; }
+    height: 500px;
+    padding-bottom: 50px; }
   .hobbies p {
     width: 50%; }
   .hobbies .hobbies--item:first-child {
