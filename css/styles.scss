@@ -1,22 +1,23 @@
 @import "variables";
+@import "mixin";
 
 body{
-  max-width: 1444px;
+  max-width:$with-max;
   margin: auto;
+  overflow-x: hidden;
 }
 .center{
   text-align: center;
 }
 .d-flex{
-  display: flex;
+  @include display(flex);
 }
 .row-reverse{
   flex-direction: row-reverse;
 }
 .column{
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include d-flex-center();
 
   & h1{
     font-size: 40px;
@@ -25,66 +26,65 @@ body{
     width: 60%;
   }
   & a{
-    display: block;
+    @include display(block);
     position: relative;
     right: 180px;
     font-size: 15px;
     color: black;
     text-decoration: none;
 
+
   }
 
 }
 footer{
   background: $main-color;
-  display: flex;
-  flex-direction: column;
+  @include display(flex,column);
   align-items: center;
+  padding: 50px;
 
 }
-.navbar{
+.navbar:not(header nav){
   width: $w-100;
   align-items: center;
   & ul{
-    display: flex;
+    @include display(flex);
     justify-content: center;
     list-style-type: none ;
   }
 }
 .navbar__link{
   color: $secondary-color;
-  padding: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
+  @include padding(10,10,10,10);
+  @include margin($right:20px,$left:20px);
   text-decoration: none;
   font-size: 18px;
   &:hover{
     color: white;
   }
 
-  /*float: left;
-  width: 120px;*/
 }
 footer{
   & h1{
     color: $secondary-color;
+    @include margin();
   }
   & section{
     width: $w-100;
     & ul{
-      display: flex;
+      @include display(flex);
       justify-content: center;
       list-style-type: none;
       & a{
 
         & img{
-          display: block;
-          margin-left:15px ;
-          margin-right:15px ;
+          @include display(block);
+          @include margin($left:15px,$right:15px);
+          &:hover{
+            @include filter();
+          }
         }
       }
-
-
     }
 
   }
@@ -93,12 +93,10 @@ footer{
 
 .testimonials{
   & section{
-    display: flex;
-    flex-direction: row;
+    @include display(flex,row);
     justify-content: center;
     & div{
-      display: flex;
-      flex-direction: column;
+      @include display(flex,column);
       align-items: center;
       & img{
         width: 72px;
@@ -107,8 +105,7 @@ footer{
       }
       & h3{
         color: #A7AAAD;
-        margin-top: 0;
-        margin-bottom:120px;
+      @include margin($bottom:120px);
       }
     }
   }
@@ -120,9 +117,10 @@ footer{
 
 .galery{
   display: flex;
+  @include display($name:flex);
   & .galery--item{
     width: 360px;
-    margin: 0;
+    @include margin();
   }
   & .galery--image{
     width: $w-100;
@@ -131,27 +129,67 @@ footer{
 }
 
 .hobbies{
-  display: flex;
-  align-items: center;
-  border:1px solid red;
+  @include display($name:flex,$alignItems:center);
+
 
   & div{
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+    @include display($name:flex,$direction: column,$justifyContent:flex-end, $alignItems:center);
     height: 500px;
   }
   & p{
     width: 50%;
   }
   & .hobbies--item:first-child{
-    background: url("../assets/pictures/photography.jpg") no-repeat;
-    background-size: cover;
+  @include background("../assets/pictures/photography.jpg",cover);
   }
   & .hobbies--item:last-child{
-    background: url("../assets/pictures/graphic-design.jpg") no-repeat;
-    background-size: cover;
+    @include background("../assets/pictures/graphic-design.jpg",cover);
+
+  }
+}
+
+header{
+  @include background("../assets/pictures/header.jpg",cover);
+  height: 700px;
+  @include display(flex,row);
+  @include display($name:flex,$direction: row,$justifyContent:space-around);
+  & .logo{
+    @include display($name:block);
+    width: 140px;
+    height: 60px;
+    margin-top: 30px;
+
+  }
+  & h1{
+    position: $position-absolute;
+    @include position($top:150px,$left:750px);
+    font-size: 56px;
+    color: white;
+
+  }
+  & nav.navbar{
+    margin-top: 30px;
+    width: 30%;
+    @include display(flex,row);
+    justify-content: space-between;
+    & ul{
+      list-style-type: none;
+      width: 100%;
+      @include display(flex);
+      & li{
+        & a{
+          padding: 10px;
+          color: white;
+          &:hover{
+           color: white;
+            background-color: rgba(255, 255, 255, 0.25);
+            border-radius:20px;
+          }
+        }
+
+      }
+    }
+
   }
 }
