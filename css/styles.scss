@@ -225,6 +225,7 @@ header{
     }
     & a{
       text-decoration: none;
+      color: black;
     }
   }
 }
@@ -233,10 +234,13 @@ header{
   body {
     @include display($name: flex, $direction: column);
     justify-content: center;
-    background: gray;
+    background: white;
   }
   .menu-hamburger{
     display: block;
+    position: $position-relative;
+    left: 40px;
+    top: 30px;
     width: 40px;
     height: 40px;
     &:active~nav:last-of-type {
@@ -245,14 +249,13 @@ header{
   }
 
 
+
   header nav.navbar{
     display: none;
   }
   .works{
     @include display($name:flex, $direction:column-reverse);
-    /*justify-content: flex-start;*/
     & div:first-of-type{
-      /*background: greenyellow;*/
       width: 100%;
     }
     & img{
@@ -267,9 +270,13 @@ header{
 
   }
   .testimonials {
+
+    & .testimonial--heading{
+      color: #A7AAAD;
+      margin-top: 0px;
+    }
     & section {
       @include display(flex, column);
-      /*justify-content: center;*/
       & div {
         @include display(flex, column);
         align-items: center;
@@ -295,39 +302,28 @@ header{
 
   /* gallerie */
   .galery {
-    /*display: flex;
-    @include display($name: flex,$direction:row);
-    margin: auto;
-    justify-content: space-around;
-    flex-wrap: wrap;*/
 
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-end;
-    height: 500px;
-
-    & .galery--item {
-
-      border: black 1px solid;
-     /* width: 360px;
-      @include margin();*/
+    display: grid;
+    grid-template-columns: auto auto;
+      /*@include margin();*/
+    & .galery--item{
+      width: 100%;
     }
-  }
+    }
+
   .hobbies{
     @include display($name:flex,$direction:column,$alignItems:center);
     width: 100%;
     & div{
       width: 100%;
-      @include display($name:flex,$direction: column, $alignItems:center);
       height: 500px;
-      /*padding-bottom: 50px;*/
     }
     & p{
       width: 50%;
+      font-size: 16px;
+      font-weight: 900;
     }
+
     & .hobbies--item:first-child{
       @include background("../assets/pictures/photography.jpg",cover);
     }
@@ -335,6 +331,18 @@ header{
       @include background("../assets/pictures/graphic-design.jpg",cover);
 
     }
+  }
+  .works--link{
+    font-size:15px;
+    font-weight: 900;
+    color: #24303E;
+    position: relative;
+    left: 0px;
+    padding: 10px;
+    margin:10px;
+  }
+  .works--heading{
+    text-align: center;
   }
 
 }

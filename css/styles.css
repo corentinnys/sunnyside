@@ -205,17 +205,21 @@ header {
     header .navbar-responsive li {
       padding: 10px; }
     header .navbar-responsive a {
-      text-decoration: none; }
+      text-decoration: none;
+      color: black; }
 
 @media screen and (max-width: 1444px) {
   body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: gray; }
+    background: white; }
 
   .menu-hamburger {
     display: block;
+    position: relative;
+    left: 40px;
+    top: 30px;
     width: 40px;
     height: 40px; }
     .menu-hamburger:active ~ nav:last-of-type {
@@ -226,10 +230,8 @@ header {
 
   .works {
     display: flex;
-    flex-direction: column-reverse;
-    /*justify-content: flex-start;*/ }
+    flex-direction: column-reverse; }
     .works div:first-of-type {
-      /*background: greenyellow;*/
       width: 100%; }
     .works img {
       text-align: center;
@@ -240,10 +242,12 @@ header {
     color: white;
     text-transform: uppercase; }
 
+  .testimonials .testimonial--heading {
+    color: #A7AAAD;
+    margin-top: 0px; }
   .testimonials section {
     display: flex;
-    flex-direction: column;
-    /*justify-content: center;*/ }
+    flex-direction: column; }
     .testimonials section div {
       display: flex;
       flex-direction: column;
@@ -264,21 +268,11 @@ header {
 
   /* gallerie */
   .galery {
-    /*display: flex;
-    @include display($name: flex,$direction:row);
-    margin: auto;
-    justify-content: space-around;
-    flex-wrap: wrap;*/
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-end;
-    height: 500px; }
+    display: grid;
+    grid-template-columns: auto auto;
+    /*@include margin();*/ }
     .galery .galery--item {
-      border: black 1px solid;
-      /* width: 360px;
-       @include margin();*/ }
+      width: 100%; }
 
   .hobbies {
     display: flex;
@@ -287,13 +281,11 @@ header {
     width: 100%; }
     .hobbies div {
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 500px;
-      /*padding-bottom: 50px;*/ }
+      height: 500px; }
     .hobbies p {
-      width: 50%; }
+      width: 50%;
+      font-size: 16px;
+      font-weight: 900; }
     .hobbies .hobbies--item:first-child {
       background: url("../assets/pictures/photography.jpg") no-repeat;
       background-size: cover;
@@ -301,6 +293,18 @@ header {
     .hobbies .hobbies--item:last-child {
       background: url("../assets/pictures/graphic-design.jpg") no-repeat;
       background-size: cover;
-      background-position: center; } }
+      background-position: center; }
+
+  .works--link {
+    font-size: 15px;
+    font-weight: 900;
+    color: #24303E;
+    position: relative;
+    left: 0px;
+    padding: 10px;
+    margin: 10px; }
+
+  .works--heading {
+    text-align: center; } }
 
 /*# sourceMappingURL=styles.css.map */
