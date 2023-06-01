@@ -206,3 +206,40 @@ header{
 
   }
 }
+
+@media screen and(max-width: 1444px) {
+  body{
+    @include display($name:flex,$direction:colum);
+    justify-content: center;
+    background: red;
+  }
+  .testimonial--heading{
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+
+  }
+  .testimonials{
+    & section{
+      @include display(flex,column);
+      /*justify-content: center;*/
+      & div{
+        @include display(flex,column);
+        align-items: center;
+        & img{
+          width: 72px;
+          height: 72px;
+          border-radius: 50%;
+        }
+        & p{
+          width: 30%;
+          text-align: center;
+        }
+        & h3{
+          color: #A7AAAD;
+          @include margin($bottom:120px);
+        }
+      }
+    }
+  }
+}

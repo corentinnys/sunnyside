@@ -186,4 +186,38 @@ header {
           background-color: rgba(255, 255, 255, 0.25);
           border-radius: 20px; }
 
+@media screen and (max-width: 1444px) {
+  body {
+    display: flex;
+    flex-direction: colum;
+    justify-content: center;
+    background: red; }
+
+  .testimonial--heading {
+    width: 100%;
+    color: white;
+    text-transform: uppercase; }
+
+  .testimonials section {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/ }
+    .testimonials section div {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .testimonials section div img {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%; }
+      .testimonials section div p {
+        width: 30%;
+        text-align: center; }
+      .testimonials section div h3 {
+        color: #A7AAAD;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 120px;
+        margin-left: 0; } }
+
 /*# sourceMappingURL=styles.css.map */
