@@ -218,6 +218,27 @@ header {
         margin-top: 0;
         margin-right: 0;
         margin-bottom: 120px;
-        margin-left: 0; } }
+        margin-left: 0; }
+
+  /* gallerie */
+  .galery {
+    /*display: flex;
+    @include display($name: flex,$direction:row);
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 50%;
+    justify-content: flex-end;
+    height: 500px; }
+    .galery .galery--item {
+      border: black 1px solid;
+      /* width: 360px;
+       @include margin();*/ }
+    .galery .galery--image {
+      width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */

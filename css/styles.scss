@@ -208,38 +208,72 @@ header{
 }
 
 @media screen and(max-width: 1444px) {
-  body{
-    @include display($name:flex,$direction:colum);
+  body {
+    @include display($name: flex, $direction: colum);
     justify-content: center;
     background: red;
   }
-  .testimonial--heading{
+  .testimonial--heading {
     width: 100%;
     color: white;
     text-transform: uppercase;
 
   }
-  .testimonials{
-    & section{
-      @include display(flex,column);
+  .testimonials {
+    & section {
+      @include display(flex, column);
       /*justify-content: center;*/
-      & div{
-        @include display(flex,column);
+      & div {
+        @include display(flex, column);
         align-items: center;
-        & img{
+
+        & img {
           width: 72px;
           height: 72px;
           border-radius: 50%;
         }
-        & p{
+
+        & p {
           width: 30%;
           text-align: center;
         }
-        & h3{
+
+        & h3 {
           color: #A7AAAD;
-          @include margin($bottom:120px);
+          @include margin($bottom: 120px);
         }
       }
     }
   }
+
+  /* gallerie */
+  .galery {
+    /*display: flex;
+    @include display($name: flex,$direction:row);
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;*/
+
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 50%;
+    justify-content: flex-end;
+    height: 500px;
+
+    & .galery--item {
+
+      border: black 1px solid;
+     /* width: 360px;
+      @include margin();*/
+    }
+
+    & .galery--image {
+      width: $w-100;
+    }
+
+  }
 }
+
