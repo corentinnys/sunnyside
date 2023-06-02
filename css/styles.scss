@@ -71,6 +71,31 @@ footer{
   }
 
 }
+.works{
+  position: relative;
+}
+.works--link{
+  &:hover~div:first-of-type{
+    position: absolute;
+    bottom:28%;
+    left: 270px;
+    opacity: 0.5;
+    height: 10px;
+    width: 80px;
+    background: #FAD400;
+    border-radius: 15px;
+  }
+  &:hover~div:first-of-type{
+    position: absolute;
+    left:865px;
+    bottom:28%;
+    opacity: 0.5;
+    height: 10px;
+    width: 80px;
+    background: #FE7766;
+    border-radius: 15px;
+  }
+}
 footer{
   & h1{
     color: $secondary-color;
@@ -115,7 +140,7 @@ footer{
         width: 75%;
       }
       & h3{
-        color: #A7AAAD;
+        color: $ligth-gray;
         @include margin($bottom:120px);
       }
     }
@@ -123,7 +148,7 @@ footer{
 }
 .testimonial--heading{
   text-align: center;
-  color: #A7AAAD;
+  color: $ligth-gray;
   margin-top: 150px;
   margin-bottom: 50px;
   text-transform: uppercase;
@@ -131,7 +156,6 @@ footer{
 }
 
 .galery{
-  display: flex;
   @include display($name:flex);
   & .galery--item{
     width: 360px;
@@ -272,8 +296,8 @@ header{
   .testimonials {
 
     & .testimonial--heading{
-      color: #A7AAAD;
-      margin-top: 0px;
+      color: $ligth-gray;
+      @include margin();
     }
     & section {
       @include display(flex, column);
@@ -289,11 +313,11 @@ header{
 
         & p {
           width: 70%;
-          text-align: center;
+          @include text-center(center);
         }
 
         & h3 {
-          color: #A7AAAD;
+          color: $ligth-gray;
           @include margin($bottom: 120px);
         }
       }
@@ -332,17 +356,31 @@ header{
 
     }
   }
+  .works{
+    position: relative;
+  }
   .works--link{
     font-size:15px;
     font-weight: 900;
     color: #24303E;
     position: relative;
-    left: 0px;
-    padding: 10px;
-    margin:10px;
+    @include  position($left:0px);
+    @include padding(10px,10px,10px,10px);
+    @include margin(10px,10px,10px,10px);
+    &:hover~div:first-of-type{
+      position: absolute;
+      top:4px;
+      bottom:15px;
+      opacity: 0.5;
+      height: 10px;
+      width: 100px;
+      background: green;
+      border-radius: 15px;
+    }
+
   }
   .works--heading{
-    text-align: center;
+      @include text-center(center) ;
   }
 
 }

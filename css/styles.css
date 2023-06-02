@@ -65,6 +65,28 @@ footer {
   .navbar__link:hover {
     color: white; }
 
+.works {
+  position: relative; }
+
+.works--link:hover ~ div:first-of-type {
+  position: absolute;
+  bottom: 28%;
+  left: 270px;
+  opacity: 0.5;
+  height: 10px;
+  width: 80px;
+  background: #FAD400;
+  border-radius: 15px; }
+.works--link:hover ~ div:first-of-type {
+  position: absolute;
+  left: 865px;
+  bottom: 28%;
+  opacity: 0.5;
+  height: 10px;
+  width: 80px;
+  background: #FE7766;
+  border-radius: 15px; }
+
 footer h1 {
   color: #458D7E;
   margin-top: 0;
@@ -118,7 +140,6 @@ footer section {
   text-transform: uppercase; }
 
 .galery {
-  display: flex;
   display: flex; }
   .galery .galery--item {
     width: 360px;
@@ -244,7 +265,10 @@ header {
 
   .testimonials .testimonial--heading {
     color: #A7AAAD;
-    margin-top: 0px; }
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0; }
   .testimonials section {
     display: flex;
     flex-direction: column; }
@@ -295,14 +319,35 @@ header {
       background-size: cover;
       background-position: center; }
 
+  .works {
+    position: relative; }
+
   .works--link {
     font-size: 15px;
     font-weight: 900;
     color: #24303E;
     position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
     left: 0px;
-    padding: 10px;
-    margin: 10px; }
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px; }
+    .works--link:hover ~ div:first-of-type {
+      position: absolute;
+      top: 4px;
+      bottom: 15px;
+      opacity: 0.5;
+      height: 10px;
+      width: 100px;
+      background: green;
+      border-radius: 15px; }
 
   .works--heading {
     text-align: center; } }
