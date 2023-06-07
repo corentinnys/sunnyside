@@ -1,91 +1,9 @@
-body {
-  max-width: 1444px;
-  margin: auto;
-  overflow-x: hidden;
-  background: #F2F2F2; }
-
-.menu-hamburger {
-  display: none; }
-
-.center {
-  text-align: center; }
-
-.d-flex {
-  display: flex; }
-
-.row-reverse {
-  flex-direction: row-reverse; }
-
-.font-family-openSans {
-  font-family: "Open Sans", sans-serif; }
-
-.column {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .column h1 {
-    font-size: 40px; }
-  .column p {
-    width: 60%; }
-  .column a {
-    display: block;
-    position: relative;
-    right: 180px;
-    font-size: 15px;
-    color: black;
-    text-decoration: none; }
-
 footer {
   background: #90D4C6;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 50px; }
-
-.navbar:not(header nav) {
-  width: 100%;
-  align-items: center; }
-  .navbar:not(header nav) ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none; }
-
-.navbar__link {
-  color: #458D7E;
-  padding-top: 10;
-  padding-right: 10;
-  padding-bottom: 10;
-  padding-left: 10;
-  margin-top: 0;
-  margin-right: 20px;
-  margin-bottom: 0;
-  margin-left: 20px;
-  text-decoration: none;
-  font-size: 18px; }
-  .navbar__link:hover {
-    color: white; }
-
-.works {
-  position: relative; }
-
-.works--link:hover ~ div:first-of-type {
-  position: absolute;
-  bottom: 28%;
-  left: 270px;
-  opacity: 0.5;
-  height: 10px;
-  width: 80px;
-  background: #FAD400;
-  border-radius: 15px; }
-.works--link:hover ~ div:first-of-type {
-  position: absolute;
-  left: 865px;
-  bottom: 28%;
-  opacity: 0.5;
-  height: 10px;
-  width: 80px;
-  background: #FE7766;
-  border-radius: 15px; }
 
 footer h1 {
   color: #458D7E;
@@ -109,68 +27,8 @@ footer section {
         -webkit-filter: brightness(0) invert(1);
         filter: brightness(0) invert(1); }
 
-.testimonials {
-  margin: 50px; }
-  .testimonials section {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-    .testimonials section div {
-      display: flex;
-      flex-direction: column;
-      align-items: center; }
-      .testimonials section div img {
-        width: 72px;
-        height: 72px;
-        border-radius: 50%; }
-      .testimonials section div p {
-        width: 75%; }
-      .testimonials section div h3 {
-        color: #A7AAAD;
-        margin-top: 0;
-        margin-right: 0;
-        margin-bottom: 120px;
-        margin-left: 0; }
-
-.testimonial--heading {
-  text-align: center;
-  color: #A7AAAD;
-  margin-top: 150px;
-  margin-bottom: 50px;
-  text-transform: uppercase; }
-
-.galery {
-  display: flex; }
-  .galery .galery--item {
-    width: 360px;
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 0; }
-  .galery .galery--image {
-    width: 100%; }
-
-.hobbies {
-  display: flex;
-  align-items: center; }
-  .hobbies div {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    height: 500px;
-    padding-bottom: 50px; }
-  .hobbies p {
-    width: 50%; }
-  .hobbies .hobbies--item:first-child {
-    background: url("../assets/pictures/photography.jpg") no-repeat;
-    background-size: cover;
-    background-position: center; }
-  .hobbies .hobbies--item:last-child {
-    background: url("../assets/pictures/graphic-design.jpg") no-repeat;
-    background-size: cover;
-    background-position: center; }
+.menu-hamburger {
+  display: none; }
 
 header {
   background: url("../assets/pictures/header.jpg") no-repeat;
@@ -228,6 +86,148 @@ header {
     header .navbar-responsive a {
       text-decoration: none;
       color: black; }
+
+.testimonials {
+  margin: 50px; }
+  .testimonials section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .testimonials section div {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .testimonials section div img {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%; }
+      .testimonials section div p {
+        width: 75%; }
+      .testimonials section div h3 {
+        color: #A7AAAD;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 120px;
+        margin-left: 0; }
+
+.testimonial--heading {
+  text-align: center;
+  color: #A7AAAD;
+  margin-top: 150px;
+  margin-bottom: 50px;
+  text-transform: uppercase; }
+
+.works {
+  position: relative; }
+
+.works--link:hover ~ div:first-of-type {
+  position: absolute;
+  bottom: 28%;
+  left: 270px;
+  opacity: 0.5;
+  height: 10px;
+  width: 80px;
+  background: #FAD400;
+  border-radius: 15px; }
+.works--link:hover ~ div:first-of-type {
+  position: absolute;
+  left: 865px;
+  bottom: 28%;
+  opacity: 0.5;
+  height: 10px;
+  width: 80px;
+  background: #FE7766;
+  border-radius: 15px; }
+
+.galery {
+  display: flex; }
+  .galery .galery--item {
+    width: 360px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0; }
+  .galery .galery--image {
+    width: 100%; }
+
+body {
+  max-width: 1444px;
+  margin: auto;
+  overflow-x: hidden;
+  background: #F2F2F2; }
+
+.center {
+  text-align: center; }
+
+.d-flex {
+  display: flex; }
+
+.row-reverse {
+  flex-direction: row-reverse; }
+
+.font-family-openSans {
+  font-family: "Open Sans", sans-serif; }
+
+.column {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .column h1 {
+    font-size: 40px; }
+  .column p {
+    width: 60%; }
+  .column a {
+    display: block;
+    position: relative;
+    right: 180px;
+    font-size: 15px;
+    color: black;
+    text-decoration: none; }
+
+.navbar:not(header nav) {
+  width: 100%;
+  align-items: center; }
+  .navbar:not(header nav) ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none; }
+
+.navbar__link {
+  color: #458D7E;
+  padding-top: 10;
+  padding-right: 10;
+  padding-bottom: 10;
+  padding-left: 10;
+  margin-top: 0;
+  margin-right: 20px;
+  margin-bottom: 0;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 18px; }
+  .navbar__link:hover {
+    color: white; }
+
+.hobbies {
+  display: flex;
+  align-items: center; }
+  .hobbies div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 500px;
+    padding-bottom: 50px; }
+  .hobbies p {
+    width: 50%; }
+  .hobbies .hobbies--item:first-child {
+    background: url("../assets/pictures/photography.jpg") no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .hobbies .hobbies--item:last-child {
+    background: url("../assets/pictures/graphic-design.jpg") no-repeat;
+    background-size: cover;
+    background-position: center; }
 
 @media screen and (max-width: 1444px) {
   body {

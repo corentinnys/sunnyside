@@ -1,0 +1,32 @@
+footer{
+  background: $main-color;
+  @include display(flex,column);
+  align-items: center;
+  padding: 50px;
+}
+
+footer{
+  & h1{
+    color: $secondary-color;
+    @include margin();
+  }
+  & section{
+    width: $w-100;
+    & ul{
+      @include display(flex);
+      justify-content: center;
+      list-style-type: none;
+      & a{
+        & img{
+          @include display(block);
+          @include margin($left:15px,$right:15px);
+          &:hover{
+            @include filter();
+          }
+        }
+      }
+    }
+
+  }
+
+}

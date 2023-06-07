@@ -1,0 +1,32 @@
+
+.testimonials{
+  margin: 50px;
+  & section{
+    @include display(flex,row);
+    justify-content: center;
+    & div{
+      @include display(flex,column);
+      align-items: center;
+      & img{
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+      }
+      & p{
+        width: 75%;
+      }
+      & h3{
+        color: $ligth-gray;
+        @include margin($bottom:120px);
+      }
+    }
+  }
+}
+.testimonial--heading{
+  text-align: center;
+  color: $ligth-gray;
+  margin-top: 150px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+
+}

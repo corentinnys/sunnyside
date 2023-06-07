@@ -1,0 +1,25 @@
+.works{
+  position: relative;
+}
+.works--link{
+  &:hover~div:first-of-type{
+    position: absolute;
+    bottom:28%;
+    left: 270px;
+    opacity: 0.5;
+    height: 10px;
+    width: 80px;
+    background: #FAD400;
+    border-radius: 15px;
+  }
+  &:hover~div:first-of-type{
+    position: absolute;
+    left:865px;
+    bottom:28%;
+    opacity: 0.5;
+    height: 10px;
+    width: 80px;
+    background: #FE7766;
+    border-radius: 15px;
+  }
+}

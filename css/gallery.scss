@@ -1,0 +1,12 @@
+
+.galery{
+  @include display($name:flex);
+  & .galery--item{
+    width: 360px;
+    @include margin();
+  }
+  & .galery--image{
+    width: $w-100;
+  }
+
+}
